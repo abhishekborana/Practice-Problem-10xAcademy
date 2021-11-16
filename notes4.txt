@@ -1,0 +1,58 @@
+Problem:
+Write a function that is given a dictionary as an input. The keys in the dictionary are strings
+and the values are list of integers. Print a key from the dictionary that has the maximum number of
+unique elements in its value list.
+
+Input:
+{
+    "Soap": [5, 7, 5, 4, 5], # 3
+    "Cheese": [6, 7, 4, 3, 3], # 4
+    "Curd": [9, 9, 6, 5, 5] # 3
+}
+
+{
+    "TV": [2, 9, 5, 3, 3, -1], [2, 9, 5, 3, -1] # 5
+    "Fridge": [10, 7, 3, 6, 0, 3], # 5
+    "Sofa": [12, 67, 12, 4], # 4
+    "Washing Machine": [9, 13, 6, 2, 13, 9] # 4
+}
+
+Dry run:
+{
+    "Soap": [5, 7, 5, 4, 5], # 3
+    "Cheese": [6, 7, 4, 3, 3], # 4
+    "Curd": [9, 9, 6, 5, 5] # 3
+}
+variables: max_key = None, max_val = 0
+
+1st Iteration:
+max_key = None, max_val = 0, current key = Soap, unique values = 3
+max_key = Soap, max_val = 3
+
+2nd Iteration:
+max_key = Soap, max_val = 3, current key = Cheese, unique values = 4
+max_key = Cheese, max_val = 4
+
+3rd Iteration:
+max_key = Cheese, max_val = 4, current key = Curd, unique values = 3
+
+return max_key
+
+Algorithm:
+1. Create 2 variables, max_key and max_val, and initialize them with 0 and None respectively
+   - max key stores the key that we have come across the dict which has the max number of unique
+   elements in its value list. Since intially we have not come across any keys, we have initialised it to None
+
+    - max_val stores the actual number of unique elements that are present for max_key
+
+2. Take a key from inputDict: current key
+
+3. Find the number of unique elements present in the value list for the current key
+
+4. Compare with max_val and if current number is greater than max_val, update max_val with
+   the current number, and update max_key with the current key
+
+5. Otherwise move on to the next key in the inputDict
+
+6. Repeat steps 2 - 5 for eack key present in the inputDict
+

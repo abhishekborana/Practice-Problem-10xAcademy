@@ -1,0 +1,20 @@
+# your code goes here
+size=int(input())
+arr=list(map(int,input().split()))
+arr.sort()
+l=0
+r=size-1
+leftRes=-1
+rightRes=-1
+Min=float("inf")
+while(l<r):
+	diff=arr[l]+arr[r]
+	if(abs(diff)<Min):
+		Min=abs(diff)
+		leftRes=arr[l]
+		rightRes=arr[r]
+	if(diff<0):
+		l+=1
+	else:
+		r-=1
+print(leftRes,rightRes,Min)

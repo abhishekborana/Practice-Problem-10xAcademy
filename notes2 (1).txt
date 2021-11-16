@@ -1,0 +1,12 @@
+- Sorting is a process of arranging or rearranging elements in a meaningful order so that we can analyze it
+- There are multiple to implement sorting on a list of items, the sorting algorithm that will be optimal depends upon the kind of data we are sorting
+- In insertion sort we have two parts to the array: sorted, other is unsorted
+- We go through the list of elements and we compare it with the sorted part of the array and we place it at the correct position
+
+Algorithm: (Ascending order)
+1. It is the 1st element, then assume that it is sorted
+2. Pick the next element
+3. Compare the element with the sorted part of the list, i.e the elements on the left
+4. Shift all the elements in the sorted part that are greater than the current element
+5. Insert the value
+6. Repeat steps 2 - 5 for each element in the list

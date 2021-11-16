@@ -1,0 +1,40 @@
+Dictionary:
+    - Is a python implementation of hashtables / hashmaps
+    - A dictionary contains multiple pairs of keys -> value
+
+    - key
+        - The keys in a dictionary are always unique
+        - The keys in a dictionary can be of any datatype, i.e. integer, float, string, Object. As long as it is hashable
+        - When we try to a access a key that is not present in a dict, then it throws a KeyError exception
+    
+    - values 
+        - The values in a dictionary can be of any datatype, i.e integer, float, string, Object
+        - The values in a dictionary can be duplicate 
+
+Comparison between Array and Hashtable data structures:
+
+Array
+
+1. items = [11, 12, 17, 21]
+2. [11,   12,   17,   21]
+   1000  1004  1008  1012
+   Continuos memory allocation
+3. access: items[index] - O(1) time
+   modify/update: items[index] = new value - O(1) time
+   delete: O(n) time
+   [11,  17,   21]
+   1000  1004  1008
+   membership test: O(n) time
+4. Ordered data structure
+[11, 12, 17, 21]
+
+Hashtable
+
+1. inventory = {'Milk': 1, 'Cheese': 2}
+2. myDict['Soap'] = 2
+   Non continuos memory allocation
+3. access: inventory[key] - O(1) time
+   modify/update: inventory[key] = new value - O(1) time
+   delete: del inventory[key] - O(1) time
+   membership test: - key1 in inventory - O(1) time
+4. Unordered data structure. We have no control on how the keys will be sorted in a dict

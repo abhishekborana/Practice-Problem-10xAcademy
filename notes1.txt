@@ -1,0 +1,65 @@
+- Datastructure: Hashtables / Hashmap
+
+A tech company is making a checkout and billing system for a supermarket. The software receives a list of items, maintains count of items in the cart and generates a bill according to the quantity of items. The company seeks your help in summarizing the cart items. For example a cart's items can be scanned and given as input in the following manner:
+
+Soap
+Milk
+Cheese
+Curd
+Mask
+Soap
+
+It wants to summarize this as follows:
+Soap - 2
+Mask - 1
+Milk - 1
+Cheese - 1
+Curd - 1
+
+Soap - 1 + 1 = 2
+Milk - 1
+Cheese - 1
+Curd - 1
+Mask - 1
+
+Algorithm:
+
+1. Maintain a list of items and initially lets keep it empty
+2. Take an item
+3. If item is already present in the list, then increment its count
+4. Otherwise, add it to the list of items and initialize count to 1
+5. Repeat steps 2 - 4 until there are no items left in the cart
+
+Dictionary:
+- It is a datastructure that consists of multiple (key -> value) pairs
+- {
+    'Soap': 2,
+    'Milk': 1,
+    'Curd': 1,
+    'Cheese': 1
+}
+
+- CRUD
+    - Create
+    - Retrieve - access the element
+    - Update
+    - Delete
+
+    Create
+        - list: a = [], a = [1, 2, 3]
+        - dict: a = {}, a = {key1: value1, key2: value2, key3: value3}
+    
+    Retrieve
+        - list: Uses index to retrieve elements - a[index]
+        - dict: Uses key to retrieve elements - a[key]
+    
+    Update:
+        - list: a[index] = new value
+        - dict: a[key] = new value
+    
+    Delete:
+        - list: a.pop(index) / a.remove('Soap')
+        - dict: a.pop(key) / del a[key]
+
+- Membership test - O(1) time
+

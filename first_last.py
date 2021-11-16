@@ -1,0 +1,29 @@
+# your code goes here
+size=int(input())
+arr=list(map(int,input().split()))
+search=int(input())
+first=-1
+last=-1
+left=0
+right=size-1
+while(left<=right):
+	mid=left+(right-left)//2
+	if(arr[mid]==search):
+		first=mid
+		right=mid-1
+	elif(arr[mid]>search):
+		right=mid-1
+	else:
+		left=mid+1
+left=0
+right=size-1
+while(left<=right):
+	mid=left+(right-left)//2
+	if(arr[mid]==search):
+		last=mid
+		left=mid+1
+	elif(arr[mid]>search):
+		right=mid-1
+	else:
+		left=mid+1
+print(first,last)

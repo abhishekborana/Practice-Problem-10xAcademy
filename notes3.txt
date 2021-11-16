@@ -1,0 +1,43 @@
+Problem:
+
+Write a function that takes a non empty array of distinct integers and an integer that represents a target sum. We have to find that in the input array if there are any two such integers that can add up to the target sum. Return the pair of numbers that sum upto target sum and if they do not exist, then return an empty list
+
+Note: You cannot obtain the target sum by adding a number to itself. They have to be distinct integers that add up
+
+Assumption: At most there is a single pair of elements that can add up to the target sum
+
+Input:
+non empty array = [3, 5, -4, 8, 11, -1, 6]
+10 = target sum
+
+num1 + num2 == target sum
+
+Ouput:
+[11, -1]
+
+Algorithm: O(n^2)
+1. Take an item from the input list and let that be the first number num1
+2. Go through the list of items and find a number in the array num2
+3. If we find num2 that sums with num1 to result in target sum, then return the pair and exit
+4. Otherwise move on to the next item in the input list
+5. Repeat 1 - 4 for each item in the input list
+
+{
+    3: True,
+    5: True,
+    -4: True,
+    8: True,
+    11: True,
+    -1: True,
+    6: True
+}
+
+target sum - num1 = num2
+
+Algorithm: O(n)
+1. Create and maintain a hashtable nums
+2. Take an item from the inputList and consider it to be num1
+3. Check if the difference between the target sum and num1 is present as a key in the hashtable
+4. If it is present, we can print the pair and exit our program
+5. Otherwise, add the first number num1 to the hashtable nums, i.e num1: True
+6. Repeat steps 2 - 5 for each and every element in the inputList

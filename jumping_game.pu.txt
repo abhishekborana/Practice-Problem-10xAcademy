@@ -1,0 +1,20 @@
+# your code goes here
+size=int(input())
+arr=list(map(int,input().split()))
+arr2=[x for x in arr]
+arr2.sort(reverse=True)
+res=0
+con=0
+for i in range(size):
+	res+=arr2[i]
+	if(i==0 and res>=size):
+		if(arr[0]==arr2[0]):
+			con+=1
+		else:
+			con=2
+			break
+	elif(res>=size):
+		break
+	else:
+		con+=1
+print(con)

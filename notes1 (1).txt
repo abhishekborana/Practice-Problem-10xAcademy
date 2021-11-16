@@ -1,0 +1,136 @@
+Sorting
+
+- Sorting is the process of arranging or re arranging elements into a meaningful order, to analyze data
+
+- There are multiple sorting algorithms
+- The kind of sorting algorithm that will perform the best depends and varies according to input data
+
+Insertion sort
+
+Ascending order
+    
+|    
+6,  3, 9, 8, 4, 5, 2
+__
+
+    |
+6,  3, 9, 8, 4, 5, 2
+__
+      |
+3, 6, 9, 8, 4, 5, 2
+____
+
+         |
+3, 6, 9, 8, 4, 5, 2
+_______
+
+            |
+3, 6, 8, 9, 4, 5, 2
+__________
+
+
+3, 6, 8, 4, 9, 5, 2
+
+3, 6, 4, 8, 9, 5, 2
+
+3, 4, 6, 8, 9, 5, 2
+
+               |
+3, 4, 6, 8, 9, 5, 2
+_____________
+
+3, 4, 6, 8, 5, 9, 2
+
+3, 4, 6, 5, 8, 9, 2
+
+3, 4, 5, 6, 8, 9, 2
+
+                  |
+3, 4, 5, 6, 8, 9, 2
+________________
+
+3, 4, 5, 6, 8, 2, 9
+
+3, 4, 5, 6, 2, 8, 9
+
+3, 4, 5, 2, 6, 8, 9
+
+3, 4, 2, 5, 6, 8, 9
+
+3, 2, 4, 5, 6, 8, 9
+
+2, 3, 4, 5, 6, 8, 9
+___________________
+
+
+
+Descending Order
+
+|
+8, 4, 6, 3, 1, 9, 5
+__
+
+   |
+8, 4, 6, 3, 1, 9, 5
+__
+  
+      |
+8, 4, 6, 3, 1, 9, 5
+____
+         |
+8, 6, 4, 3, 1, 9, 5
+_______
+
+            |
+8, 6, 4, 3, 1, 9, 5
+__________
+
+               |
+8, 6, 4, 3, 1, 9, 5
+_____________
+
+8, 6, 4, 3, 9, 1, 5
+
+8, 6, 4, 9, 3, 1, 5
+
+8, 6, 9, 4, 3, 1, 5
+
+8, 9, 6, 4, 3, 1, 5
+
+                  |
+9, 8, 6, 4, 3, 1, 5
+________________
+
+9, 8, 6, 4, 3, 5, 1
+
+9, 8, 6, 4, 5, 3, 1
+
+9, 8, 6, 5, 4, 3, 1
+___________________
+
+
+Points to note:
+
+- We should consider the first element to be sorted
+- In insertion sort there exists a sorted part of the list and an unsorted part of the list
+- Go through the list and for each element find it's correct position by comparing it to the element on the left (comparing with the sorted part of the list and making swaps)
+
+Input:
+8, 4, 6, 3, 1, 9, 5
+
+Algorithm: (Ascending order)
+1. It is the 1st element, then assume that it is sorted
+2. Pick the next element
+3. Compare the element with the sorted part of the list, i.e the elements on the left
+4. Shift all the elements in the sorted part that are greater than the current element
+5. Insert the value
+6. Repeat steps 2 - 5 for each element in the list
+
+
+Algorithm: (Descending order)
+1. It is the 1st element, then assume that it is sorted
+2. Pick the next element
+3. Compare the element with the sorted part of the list, i.e the elements on the left
+4. Shift all the elements in the sorted part that are lesser than the current element
+5. Insert the value
+6. Repeat steps 2 - 5 for each element in the list

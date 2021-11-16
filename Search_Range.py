@@ -1,0 +1,33 @@
+# your code goes here
+# your code goes here
+size=int(input())
+arr=list(map(int,input().split()))
+f,l=map(int,input().split())
+resf=-1
+resl=-1
+left=0
+right=size-1
+while(left<=right):
+	mid=left+(right-left)//2
+	if(arr[mid]>=f):
+		resf=mid
+		right=mid-1
+	elif(arr[mid]<f):
+		left=mid+1
+	else:
+		right=mid-1
+left=0
+right=size-1
+while(left<=right):
+	mid=left+(right-left)//2
+	if(arr[mid]<=l):
+		resl=mid
+		left=mid+1
+	elif(arr[mid]<l):
+		left=mid+1
+	else:
+		right=mid-1
+if(resf>resl):
+	print("-1","-1")
+else:
+	print(resf,resl)
